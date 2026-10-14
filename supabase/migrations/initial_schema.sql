@@ -1,9 +1,4 @@
--- ============================================================================
--- ONSPOP DATABASE SCHEMA & RLS POLICIES
--- Initial Migration: Profiles, Jobs, Applications, Saved Jobs, Messages, Notifs
--- ============================================================================
 
--- Enable required extensions
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- ----------------------------------------------------------------------------
@@ -23,7 +18,6 @@ CREATE TABLE IF NOT EXISTS public.profiles (
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
 
--- Enable RLS
 ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
 
 -- Profiles Policies
