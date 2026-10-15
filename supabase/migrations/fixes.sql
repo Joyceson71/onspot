@@ -12,6 +12,9 @@ ALTER TABLE public.jobs
   ADD COLUMN IF NOT EXISTS start_at TIMESTAMPTZ,
   ADD COLUMN IF NOT EXISTS end_at   TIMESTAMPTZ;
 
+ALTER TABLE public.profiles
+  ADD COLUMN IF NOT EXISTS wallet_balance NUMERIC(10, 2) DEFAULT 0.00;
+
 UPDATE public.jobs
 SET start_at = CASE
   WHEN date ~* '^[0-9]{1,2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [0-9]{4}$'
