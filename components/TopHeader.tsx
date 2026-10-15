@@ -150,7 +150,7 @@ export default function TopHeader() {
               <rect x="14" y="14" width="7" height="7" rx="1" />
               <rect x="3" y="14" width="7" height="7" rx="1" />
             </svg>
-            Other
+            <span id="top-label-other">All Works</span>
           </a>
 
           <a
