@@ -7,6 +7,8 @@ import TopHeader from '@/components/TopHeader';
 import JobFeed from '@/components/JobFeed';
 import AllWorksSection from '@/components/AllWorksSection';
 import SavedJobsSection from '@/components/SavedJobsSection';
+import MVPShowcaseSection from '@/components/MVPShowcaseSection';
+import LandingPage from '@/components/LandingPage';
 import ProfileDrawer from '@/components/ProfileDrawer';
 import SettingsDrawer from '@/components/SettingsDrawer';
 import DealerFloatingButton from '@/components/DealerFloatingButton';
@@ -40,6 +42,8 @@ export default function Home() {
       <div className="app-container">
         <main className="main-content">
           {activeSection === 'home' && <JobFeed />}
+          {activeSection === 'landing' && <LandingPage />}
+          {activeSection === 'mvp' && <MVPShowcaseSection />}
           {activeSection === 'other' && <AllWorksSection />}
           {activeSection === 'saved' && <SavedJobsSection />}
         </main>

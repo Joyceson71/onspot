@@ -41,7 +41,7 @@ export default function TopHeader() {
               height: '38px',
               width: 'auto',
               borderRadius: '8px',
-              filter: 'drop-shadow(0 0 5px rgba(0, 245, 155, 0.4))',
+              filter: 'drop-shadow(0 0 8px rgba(255, 92, 87, 0.45))',
               objectFit: 'contain',
             }}
           />
@@ -53,6 +53,25 @@ export default function TopHeader() {
 
         {/* Desktop Nav Links */}
         <nav className="nav-links desktop-nav">
+          <a
+            className={`nav-item ${activeSection === 'landing' ? 'active' : ''}`}
+            id="nav-landing"
+            onClick={() => openSection('landing')}
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polygon points="12 8 8 12 12 16 16 12 12 8" />
+            </svg>
+            Overview
+          </a>
+
           <a
             className={`nav-item ${activeSection === 'home' ? 'active' : ''}`}
             id="nav-home"
@@ -130,6 +149,24 @@ export default function TopHeader() {
               <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
             </svg>
             Profile
+          </a>
+
+          <a
+            className={`nav-item ${activeSection === 'mvp' ? 'active' : ''}`}
+            id="nav-mvp"
+            onClick={() => openSection('mvp')}
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            <span id="top-label-mvp">MVP Showcase</span>
           </a>
 
           <a

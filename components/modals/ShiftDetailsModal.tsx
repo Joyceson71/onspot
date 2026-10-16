@@ -120,8 +120,8 @@ export default function ShiftDetailsModal() {
                 style={{
                   fontSize: '22px',
                   fontWeight: 800,
-                  color: 'var(--mint-primary)',
-                  fontFamily: 'Space Grotesk',
+                  color: 'var(--coral)',
+                  fontFamily: 'Syne, sans-serif',
                 }}
               >
                 {item.pay}
@@ -239,8 +239,8 @@ export default function ShiftDetailsModal() {
             <div
               style={{
                 padding: '10px 12px',
-                background: 'rgba(0, 245, 155, 0.05)',
-                borderLeft: '3px solid var(--mint-primary)',
+                background: 'var(--coral-subtle)',
+                borderLeft: '3px solid var(--coral)',
                 borderRadius: '4px',
                 fontSize: '12.5px',
                 color: 'var(--text-primary)',

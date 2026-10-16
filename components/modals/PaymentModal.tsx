@@ -63,8 +63,8 @@ export default function PaymentModal() {
             style={{
               fontSize: '28px',
               fontWeight: 800,
-              color: 'var(--mint-primary)',
-              fontFamily: '"Space Grotesk", sans-serif',
+              color: 'var(--coral)',
+              fontFamily: 'Syne, sans-serif',
             }}
             id="payment-amount-display"
           >

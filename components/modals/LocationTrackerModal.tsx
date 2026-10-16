@@ -49,7 +49,7 @@ export default function LocationTrackerModal() {
             style={{
               position: 'absolute',
               inset: 0,
-              background: 'radial-gradient(circle, rgba(0, 245, 155, 0.1) 0%, rgba(4, 8, 6, 1) 100%)',
+              background: 'radial-gradient(circle, rgba(167, 139, 250, 0.15) 0%, var(--bg-void) 100%)',
             }}
           />
           <svg

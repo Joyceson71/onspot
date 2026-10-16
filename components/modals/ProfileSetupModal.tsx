@@ -117,8 +117,8 @@ export default function ProfileSetupModal() {
           </div>
           <div
             style={{
-              background: 'rgba(0, 245, 155, 0.06)',
-              border: '1px solid var(--border-mint)',
+              background: 'var(--coral-subtle)',
+              border: '1px solid var(--border-coral)',
               borderRadius: 'var(--radius-md)',
               padding: '12px',
               marginBottom: '16px',

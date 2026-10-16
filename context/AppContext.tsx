@@ -34,8 +34,8 @@ export interface AppContextType {
   userProfile: UserProfile;
   updateProfile: (profile: Partial<UserProfile>) => Promise<void>;
   isAuthenticated: boolean;
-  activeSection: 'home' | 'other' | 'saved';
-  openSection: (section: 'home' | 'other' | 'saved') => void;
+  activeSection: 'home' | 'other' | 'saved' | 'mvp' | 'landing';
+  openSection: (section: 'home' | 'other' | 'saved' | 'mvp' | 'landing') => void;
   activeModalShift: Job | null;
   activeModal: string | null;
   openModals: Set<string>;
@@ -111,7 +111,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [sortBy, setSortBy] = useState<string>('recommended');
   const [userProfile, setUserProfile] = useState<UserProfile>(EMPTY_PROFILE);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [activeSection, setActiveSection] = useState<'home' | 'other' | 'saved'>('home');
+  const [activeSection, setActiveSection] = useState<'home' | 'other' | 'saved' | 'mvp' | 'landing'>('home');
   const [activeModalShift, setActiveModalShift] = useState<Job | null>(null);
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const [openModals, setOpenModals] = useState<Set<string>>(new Set());
@@ -427,7 +427,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   }, [toastMessage]);
 
-  const openSection = (sec: 'home' | 'other' | 'saved') => {
+  const openSection = (sec: 'home' | 'other' | 'saved' | 'mvp' | 'landing') => {
     setActiveSection(sec);
   };
 

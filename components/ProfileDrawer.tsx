@@ -189,6 +189,58 @@ export default function ProfileDrawer() {
             </div>
           </div>
 
+          {/* Landing Overview */}
+          <div
+            className="drawer-info-card"
+            style={{
+              cursor: 'pointer',
+            }}
+            onClick={() => {
+              closeProfileDrawer();
+              openSection('landing');
+            }}
+          >
+            <div
+              className="drawer-card-title"
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+            >
+              <span>🌐 Platform Overview</span>
+              <span>›</span>
+            </div>
+          </div>
+
+          {/* MVP Showcase Section */}
+          <div
+            className="drawer-info-card"
+            style={{
+              cursor: 'pointer',
+              background: 'linear-gradient(135deg, rgba(255, 92, 87, 0.12) 0%, rgba(167, 139, 250, 0.08) 100%)',
+              border: '1px solid var(--border-coral)',
+            }}
+            onClick={() => {
+              closeProfileDrawer();
+              openSection('mvp');
+            }}
+          >
+            <div
+              className="drawer-card-title"
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                color: 'var(--coral)',
+                fontWeight: 700,
+              }}
+            >
+              <span>⭐ MVP Showcase</span>
+              <span>›</span>
+            </div>
+          </div>
+
           {/* Other / All Works */}
           <div
             className="drawer-info-card"

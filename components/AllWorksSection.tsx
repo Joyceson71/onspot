@@ -150,8 +150,8 @@ export default function AllWorksSection() {
           ==================================================================== */}
       <div
         style={{
-          background: 'linear-gradient(135deg, rgba(0, 245, 155, 0.08) 0%, rgba(14, 23, 19, 0.95) 100%)',
-          border: '1px solid rgba(0, 245, 155, 0.2)',
+          background: 'linear-gradient(135deg, rgba(167, 139, 250, 0.12) 0%, rgba(17, 17, 37, 0.95) 100%)',
+          border: '1px solid var(--border-violet)',
           borderRadius: 'var(--radius-xl)',
           padding: '32px 28px',
           marginBottom: '32px',
@@ -169,7 +169,7 @@ export default function AllWorksSection() {
             width: '260px',
             height: '260px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(0, 245, 155, 0.15) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(255, 92, 87, 0.15) 0%, transparent 70%)',
             pointerEvents: 'none',
           }}
         />
@@ -182,9 +182,9 @@ export default function AllWorksSection() {
               gap: '6px',
               padding: '4px 12px',
               borderRadius: '999px',
-              background: 'rgba(0, 245, 155, 0.12)',
-              border: '1px solid rgba(0, 245, 155, 0.3)',
-              color: 'var(--mint-primary)',
+              background: 'var(--coral-subtle)',
+              border: '1px solid var(--border-coral)',
+              color: 'var(--coral)',
               fontSize: '12px',
               fontWeight: 700,
               letterSpacing: '0.06em',
@@ -246,7 +246,7 @@ export default function AllWorksSection() {
                   width: '38px',
                   height: '38px',
                   borderRadius: '10px',
-                  background: 'rgba(0, 245, 155, 0.15)',
+                  background: 'var(--coral-subtle)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -345,7 +345,7 @@ export default function AllWorksSection() {
                   width: '38px',
                   height: '38px',
                   borderRadius: '10px',
-                  background: 'rgba(0, 245, 155, 0.15)',
+                  background: 'var(--violet-subtle)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -399,9 +399,9 @@ export default function AllWorksSection() {
             <button
               onClick={() => setSelectedCategory('All')}
               style={{
-                background: 'rgba(0, 245, 155, 0.1)',
-                border: '1px solid var(--border-mint)',
-                color: 'var(--mint-primary)',
+                background: 'var(--coral-subtle)',
+                border: '1px solid var(--border-coral)',
+                color: 'var(--coral)',
                 borderRadius: 'var(--radius-md)',
                 padding: '6px 14px',
                 fontSize: '13px',
@@ -456,7 +456,7 @@ export default function AllWorksSection() {
                   cursor: 'pointer',
                   transition: 'all 0.25s cubic-bezier(0.16, 1, 0.3, 1)',
                   boxShadow: isSelected
-                    ? '0 8px 28px rgba(0, 245, 155, 0.25), 0 0 16px rgba(0, 245, 155, 0.2)'
+                    ? '0 8px 28px rgba(255, 92, 87, 0.25), 0 0 16px rgba(167, 139, 250, 0.2)'
                     : 'var(--shadow-sm)',
                   transform: isSelected ? 'translateY(-4px)' : 'none',
                   display: 'flex',
@@ -465,7 +465,7 @@ export default function AllWorksSection() {
                 onMouseEnter={(e) => {
                   if (!isSelected) {
                     e.currentTarget.style.transform = 'translateY(-4px)';
-                    e.currentTarget.style.borderColor = 'rgba(0, 245, 155, 0.35)';
+                    e.currentTarget.style.borderColor = 'rgba(255, 92, 87, 0.35)';
                     e.currentTarget.style.boxShadow = '0 12px 30px rgba(0,0,0,0.5)';
                   }
                 }}
@@ -529,9 +529,9 @@ export default function AllWorksSection() {
 
                     <span
                       style={{
-                        background: count > 0 ? 'rgba(0, 245, 155, 0.2)' : 'rgba(100, 116, 139, 0.2)',
-                        border: count > 0 ? '1px solid rgba(0, 245, 155, 0.4)' : '1px solid rgba(255,255,255,0.1)',
-                        color: count > 0 ? 'var(--mint-primary)' : 'var(--text-muted)',
+                        background: count > 0 ? 'var(--coral-subtle)' : 'rgba(100, 116, 139, 0.2)',
+                        border: count > 0 ? '1px solid var(--border-coral)' : '1px solid rgba(255,255,255,0.1)',
+                        color: count > 0 ? 'var(--coral)' : 'var(--text-muted)',
                         fontSize: '11px',
                         fontWeight: 700,
                         padding: '3px 8px',
@@ -753,9 +753,9 @@ export default function AllWorksSection() {
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
-              border: selectedCategory === 'All' ? '1px solid var(--mint-primary)' : '1px solid var(--border-subtle)',
-              background: selectedCategory === 'All' ? 'rgba(0, 245, 155, 0.15)' : 'var(--bg-darkest)',
-              color: selectedCategory === 'All' ? 'var(--mint-primary)' : 'var(--text-secondary)',
+              border: selectedCategory === 'All' ? '1px solid var(--coral)' : '1px solid var(--border-subtle)',
+              background: selectedCategory === 'All' ? 'var(--coral-subtle)' : 'var(--bg-card)',
+              color: selectedCategory === 'All' ? 'var(--coral)' : 'var(--text-secondary)',
               transition: 'all 0.15s ease',
             }}
           >
@@ -775,9 +775,9 @@ export default function AllWorksSection() {
                   fontSize: '12px',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  border: isCatActive ? '1px solid var(--mint-primary)' : '1px solid var(--border-subtle)',
-                  background: isCatActive ? 'rgba(0, 245, 155, 0.15)' : 'var(--bg-darkest)',
-                  color: isCatActive ? 'var(--mint-primary)' : 'var(--text-secondary)',
+                  border: isCatActive ? '1px solid var(--coral)' : '1px solid var(--border-subtle)',
+                  background: isCatActive ? 'var(--coral-subtle)' : 'var(--bg-card)',
+                  color: isCatActive ? 'var(--coral)' : 'var(--text-secondary)',
                   transition: 'all 0.15s ease',
                 }}
               >
@@ -879,9 +879,9 @@ export default function AllWorksSection() {
                 style={{
                   fontSize: '12px',
                   fontWeight: 600,
-                  color: 'var(--mint-primary)',
-                  background: 'rgba(0, 245, 155, 0.12)',
-                  border: '1px solid rgba(0, 245, 155, 0.25)',
+                  color: 'var(--coral)',
+                  background: 'var(--coral-subtle)',
+                  border: '1px solid var(--border-coral)',
                   padding: '2px 8px',
                   borderRadius: '999px',
                 }}
@@ -996,9 +996,9 @@ export default function AllWorksSection() {
               fontSize: '12px',
               fontWeight: 600,
               cursor: 'pointer',
-              border: selectedLocality === '' ? '1px solid var(--mint-primary)' : '1px solid var(--border-subtle)',
-              background: selectedLocality === '' ? 'rgba(0, 245, 155, 0.15)' : 'var(--bg-darkest)',
-              color: selectedLocality === '' ? 'var(--mint-primary)' : 'var(--text-secondary)',
+              border: selectedLocality === '' ? '1px solid var(--coral)' : '1px solid var(--border-subtle)',
+              background: selectedLocality === '' ? 'var(--coral-subtle)' : 'var(--bg-card)',
+              color: selectedLocality === '' ? 'var(--coral)' : 'var(--text-secondary)',
             }}
           >
             All Chennai Zones
@@ -1015,9 +1015,9 @@ export default function AllWorksSection() {
                   fontSize: '12px',
                   fontWeight: 600,
                   cursor: 'pointer',
-                  border: isLocSelected ? '1px solid var(--mint-primary)' : '1px solid var(--border-subtle)',
-                  background: isLocSelected ? 'rgba(0, 245, 155, 0.15)' : 'var(--bg-darkest)',
-                  color: isLocSelected ? 'var(--mint-primary)' : 'var(--text-secondary)',
+                  border: isLocSelected ? '1px solid var(--coral)' : '1px solid var(--border-subtle)',
+                  background: isLocSelected ? 'var(--coral-subtle)' : 'var(--bg-card)',
+                  color: isLocSelected ? 'var(--coral)' : 'var(--text-secondary)',
                   transition: 'all 0.15s ease',
                 }}
               >

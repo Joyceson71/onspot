@@ -121,8 +121,8 @@ export default function NotificationPreferencesModal() {
             <label
               className="benefit-chip"
               style={{
-                border: '1px solid var(--mint-primary)',
-                background: 'rgba(0, 245, 155, 0.05)',
+                border: '1px solid var(--border-coral)',
+                background: 'var(--coral-subtle)',
               }}
             >
               <input
